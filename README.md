@@ -48,7 +48,6 @@ The first step is to **load the training and test datasets** from CSV files and 
 - `train_emoji.csv`: Contains training samples with text and corresponding emoji labels
 - `test_emoji.csv`: Used to evaluate the trained model
 
-```python
 import pandas as pd
 
 # Load datasets
@@ -89,7 +88,7 @@ with open("glove.6B.50d.txt", encoding='utf-8') as f:
         word = values[0]
         vectors = np.asarray(values[1:], dtype='float32')
         embeddings_index[word] = vectors
-
+```
 ## 3️⃣ Build, Compile & Train the LSTM Model
 
 We define our LSTM-based neural network using the **Keras Sequential API**, ideal for stacked layers in a linear pipeline.
@@ -130,6 +129,7 @@ model = Sequential([
     Dropout(0.5),
     Dense(5, activation='softmax')
 ])
+```
 
 ## 4️⃣ Model Evaluation
 
@@ -172,7 +172,7 @@ def evaluate_model():
     plt.ylabel('Actual')
     plt.xlabel('Predicted')
     plt.show()
-
+```
 ## 5️⃣ Emoji Prediction Function
 
 To make the model interactive, we create a **custom prediction function** that takes a user-entered sentence and returns the most likely emoji based on the learned context.
@@ -208,7 +208,7 @@ def predict_emoji(text):
     print("\nAll Probabilities:")
     for i, prob in enumerate(prediction[0]):
         print(f"{emoji.emojize(emoji_dict[i])}: {prob*100:.1f}%")
-
+```
 ## 6️⃣ Interactive Emoji Predictor
 
 This simple command-line interface allows users to **test the model in real-time** by typing in custom sentences. It’s ideal for quick validation, demos, or user feedback.
@@ -227,3 +227,4 @@ while True:
         print("👋 Exiting Emoji Predictor.")
         break
     predict_emoji(user_input)
+```
