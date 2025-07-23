@@ -48,8 +48,6 @@ The first step is to **load the training and test datasets** from CSV files and 
 - `train_emoji.csv`: Contains training samples with text and corresponding emoji labels
 - `test_emoji.csv`: Used to evaluate the trained model
 
-### 🧾 Code
-
 ```python
 import pandas as pd
 
