@@ -54,15 +54,16 @@ import pandas as pd
 train = pd.read_csv("train_emoji.csv")
 test = pd.read_csv("test_emoji.csv")
 
+```python
 # Emoji mapping dictionary
 emoji_dict = {
     0: "❤️",  # red heart
     1: "🏀",  # basketball
     2: "😂",  # face with tears of joy
-    3: "😕",  # confused face
+    3: "😒",  # confused face
     4: "🔪"   # knife
 }
-
+```
 ## 2️⃣ Text Preprocessing & Word Embedding
 
 Before feeding the data into the LSTM model, text must be tokenized and converted into numerical vectors that the model can understand.
