@@ -56,11 +56,11 @@ test = pd.read_csv("test_emoji.csv")
 
 # Emoji mapping dictionary
 emoji_dict = {
-    0: "❤️",   # red heart
-    1: "🏀",   # basketball
-    2: "😂",   # face with tears of joy
-    3: "😕",   # confused face
-    4: "🔪"    # knife
+    0: "❤️",  # red heart
+    1: "🏀",  # basketball
+    2: "😂",  # face with tears of joy
+    3: "😕",  # confused face
+    4: "🔪"   # knife
 }
 
 ## 2️⃣ Text Preprocessing & Word Embedding
